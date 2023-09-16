@@ -1,0 +1,60 @@
+<div>
+    <h3>Add new Pizza</h3>
+</div>
+
+
+<div class="input-group input-group-sm mb-3">
+  
+    <div class="input-group mb-3">
+    <!-- Name -->
+        <div class="input-group-prepend">
+            <label class="input-group-text" id="inputGroup-sizing-default">Name</label>
+            <input type="text" class="form-control" placeholder="Name" [(ngModel)]="pizza.name">
+        </div>
+    </div>
+
+    <!-- Size -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Size</label>
+        <select class="custom-select"[(ngModel)]="selectedSize" (change)="onSelectedSize()" id="inputGroupSelect01">
+            <option selected disabled>Choose...</option>
+            <option [ngValue]=1>Small</option>
+            <option [ngValue]=2>Medium</option>
+            <option [ngValue]=3>Large</option>
+        </select>  
+        </div>
+    </div>
+
+    <!-- Gluten Free -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Gluten free</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="pizza.isGlutenFree">
+            <option selected>Choose...</option>
+            <option [ngValue]=true>Yes</option>
+            <option [ngValue]=false>No</option>
+        </select>  
+    </div>
+
+    <!-- Price -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">€</span>
+        </div>
+        <input type="number" class="form-control" [(ngModel)]="pizza.price" aria-label="Amount (to the nearest dollar)">
+        <div class="input-group-append">
+          <span class="input-group-text">.00</span>
+        </div>
+    </div>
+
+    <!-- Add Button -->
+    <div>
+        <button type="button" class="btn btn-success" (click)="addPizza()">Add</button>
+    </div>
+</div>
+
+
+
+  

@@ -1,0 +1,38 @@
+<div>
+    <div>
+        <h3>Pizzas List</h3>
+    </div>
+    <div>
+        <button type="button" class="btn btn-primary" routerLink="/pizza-form" >Add Pizza</button>
+    </div>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Size</th>
+            <th scope="col">Gluten Free</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pizza of pizzas">
+            <th scope="row">{{pizza.id}}</th>
+            <td>{{pizza.name}}</td>
+            <td>{{pizza.size == '1' ? 'Small' : (pizza.size == '2' ? 'Medium': 'Large')}}</td>
+            <td>{{pizza.isGlutenFree ? 'Yes' : 'No'}}</td>
+            <td>€ {{pizza.price}}</td>
+            <td><button type="button" class="btn btn-outline-danger" (click)="deletePizza(pizza.id)">Remove</button></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    <!-- <ul *ngFor="let pizza of pizzas">
+        <li>Name : {{pizza.name}}</li>
+        <li>Gluten Free : {{pizza.isGlutenFree ? 'Yes' : 'No'}}</li>
+        <li>Price : € {{pizza.price}}</li>
+        <li>Size : {{pizza.size}}</li>
+
+    </ul> -->
+</div>
