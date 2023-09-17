@@ -9,11 +9,21 @@ import { Component, OnInit } from '@angular/core';
 export class PizzaListComponent implements OnInit {
 
   pizzas : any;
+  showSpinner : boolean = false;
+  showAlert : boolean = false;
+
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.getPizzas();
+    this.showSpinner = true;
+    // Dopo 2 secondi, nascondi il spinner
+    setTimeout(() => {
+        this.showSpinner = false;
+        // this.goPizzasList();
+        this.getPizzas();
+    }, 2000);
+
 
   }
 
@@ -25,6 +35,13 @@ export class PizzaListComponent implements OnInit {
       }, 
       error: error => console.log(error),
       complete : () => {
+        // this.showSpinner = true;
+        // // Dopo 2 secondi, nascondi il spinner
+        // setTimeout(() => {
+        //     this.showSpinner = false;
+        //     // this.goPizzasList();
+        // }, 2000);
+
         console.log('Request has completed');
       }
     })
@@ -45,8 +62,21 @@ export class PizzaListComponent implements OnInit {
       }, 
       error: error => console.log(error),
       complete : () => {
-        console.log('Request has completed');
-        this.getPizzas();
+        this.showSpinner = true;
+
+        // Dopo 2 secondi, nascondi il spinner
+        setTimeout(() => {
+            this.showSpinner = false;
+            // this.goPizzasList();
+        }, 2000);
+
+        this.showAlert = true;
+        setTimeout(() => {
+          this.showAlert = false;
+          console.log('dentro alert');
+          
+          this.getPizzas();
+        }, 3000);
         
       }
     })

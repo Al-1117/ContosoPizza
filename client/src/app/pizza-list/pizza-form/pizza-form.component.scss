@@ -24,3 +24,24 @@
         margin-top: 1rem;
     }
 }
+
+.spinner_container{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .alert-success{
+        width: 100%;
+        text-align: center;
+
+    }
+
+}
+::ng-deep .spinner-border{
+    width: 7rem;
+    height: 7rem;
+}
+    
+        
+    

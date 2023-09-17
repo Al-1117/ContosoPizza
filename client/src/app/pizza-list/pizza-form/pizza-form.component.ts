@@ -15,6 +15,8 @@ export class PizzaFormComponent implements OnInit {
   selectedSize : string | undefined;
   isGlutenFree : boolean = false;
   pizzas: any;
+  showSpinner : boolean = false;
+  showAlert : boolean = false;
 
   constructor(private http: HttpClient, private router : Router) { }
 
@@ -46,8 +48,24 @@ export class PizzaFormComponent implements OnInit {
       }, 
       error: error => console.log(error),
       complete : () => {
+
+        this.showSpinner = true;
+
+        // Dopo 2 secondi, nascondi il spinner
+        setTimeout(() => {
+            this.showSpinner = false;
+            // this.goPizzasList();
+        }, 2000);
+
+        this.showAlert = true;
+        setTimeout(() => {
+          this.showAlert = false;
+          console.log('dentro alert');
+          
+          this.goPizzasList();
+      }, 5000);
+
         console.log('Request has completed');
-        this.goPizzasList();
       }
     })
   } 
