@@ -9707,11 +9707,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alioune_pen/Desktop/exercises/pratic/mslearn-create-razor-pages-aspnet-core/ContosoPizza/ContosoPizza.csproj",
+      "projectUniqueName": "/Users/alioune_pen/Desktop/exercises/pratic/ContosoPizza/ContosoPizza/ContosoPizza.csproj",
       "projectName": "ContosoPizza",
-      "projectPath": "/Users/alioune_pen/Desktop/exercises/pratic/mslearn-create-razor-pages-aspnet-core/ContosoPizza/ContosoPizza.csproj",
+      "projectPath": "/Users/alioune_pen/Desktop/exercises/pratic/ContosoPizza/ContosoPizza/ContosoPizza.csproj",
       "packagesPath": "/Users/alioune_pen/.nuget/packages/",
-      "outputPath": "/Users/alioune_pen/Desktop/exercises/pratic/mslearn-create-razor-pages-aspnet-core/ContosoPizza/obj/",
+      "outputPath": "/Users/alioune_pen/Desktop/exercises/pratic/ContosoPizza/ContosoPizza/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/alioune_pen/.nuget/NuGet/NuGet.Config"

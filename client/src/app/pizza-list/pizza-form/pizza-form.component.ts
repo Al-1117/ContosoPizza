@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Pizza } from 'src/app/Models/Pizza';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -13,7 +16,7 @@ export class PizzaFormComponent implements OnInit {
   isGlutenFree : boolean = false;
   pizzas: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router : Router) { }
 
   ngOnInit(): void {
   }
@@ -44,28 +47,17 @@ export class PizzaFormComponent implements OnInit {
       error: error => console.log(error),
       complete : () => {
         console.log('Request has completed');
+        this.goPizzasList();
       }
     })
   } 
 
+  goPizzasList(){
+    this.router.navigate(['/', 'pizza-list'])
 
+  }
 
-}
-
-class Pizza {
-  id?: number;
-  name?: string = "";
-  size: string | undefined;
-  isGlutenFree?: boolean;
-  price?: number;
-
-  // constructor(id : number, name : string, size : number, isGlutenFree: boolean, price: number){
-  //   this.id = id;
-  //   this.name = name;
-  //   this.size = size;
-  //   this.isGlutenFree = isGlutenFree;
-  //   this.price = price;
-  // }
 
 
 }
+

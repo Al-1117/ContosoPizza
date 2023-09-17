@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nz49gDW5kUVlhK7aY1tcceNR1nSHvAH5sz+L0w8rr0Krb4Q7kH8dVIuk4eIqHVfEmT/6ykZepZMGImak/0QU9Q==",
+  "dgSpecHash": "ngdMT6uMO9+L4Tp/Y9w70cSymt6VAYgOjQFBis37sXyk2QUywa7FJpLWSCCwHTbo49rU5miqZaI6OiAFKJDq1g==",
   "success": true,
-  "projectFilePath": "/Users/alioune_pen/Desktop/exercises/pratic/mslearn-create-razor-pages-aspnet-core/ContosoPizza/ContosoPizza.csproj",
+  "projectFilePath": "/Users/alioune_pen/Desktop/exercises/pratic/ContosoPizza/ContosoPizza/ContosoPizza.csproj",
   "expectedPackageFiles": [
     "/Users/alioune_pen/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/alioune_pen/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",
